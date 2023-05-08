@@ -1,13 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import "@picocss/pico";
 
 import AOS from "aos";
 import Features from "../components/Features/index";
 
 export default function Home() {
   return (
-    <div>
+    <div style={{ backgroundColor: "blue" }}>
       <Head>
         <title>ROCKET Doge - To the moon!</title>
         <meta
@@ -18,56 +19,94 @@ export default function Home() {
       </Head>
 
       <nav>
-        <ul>Features</ul>
-        <a>Benefits How to buy Tokenomics</a>
+        <ul>
+          <li>
+            <strong>
+              Rocket Doge{" "}
+              <img
+                src="/dogerocket.jpeg"
+                alt="ROCKET Doge logo"
+                className={styles.title}
+                width="100"
+              />
+            </strong>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">Features</a>
+          </li>
+          <li>
+            <a href="#">Benefits</a>
+          </li>
+          <li>
+            <a href="#">How to buy</a>
+          </li>
+          <li>
+            <a href="#">Tokenomics</a>
+          </li>
+          <li>
+            <a href="#">Roadmap</a>
+          </li>
+        </ul>
       </nav>
 
       <main>
         <h1 className={styles.title}>ROCKET Doge</h1>
-        <p className={styles.container}>The fastest way to the moon!</p>
+        <p className={styles.description}>The fastest way to the moon!</p>
         <div className="flex justify-center my-8">
           <img
             src="/dogerocket.jpeg"
             alt="ROCKET Doge logo"
-            className="w-1/2"
+            width="500"
+            style={{ background: "transparent" }}
           />
         </div>
       </main>
       <Features></Features>
+      <article style={{ backgroundColor: "blue" }}>
+        <div>
+          <h2 className={styles.title}>Benefits</h2>
+          <ul className="list-disc list-inside">
+            <li>Potential for high returns</li>
+            <li>Diversify your investment portfolio</li>
+            <li>Support a community-driven project</li>
+          </ul>
+        </div>
+      </article>
 
-      <div className="my-8">
-        <h2 className="text-2xl font-bold mb-2">Benefits</h2>
-        <ul className="list-disc list-inside">
-          <li>Potential for high returns</li>
-          <li>Diversify your investment portfolio</li>
-          <li>Support a community-driven project</li>
-        </ul>
-      </div>
+      <article style={{ backgroundColor: "blue" }}>
+        <div className="my-8">
+          <h2 className={styles.title}>How to buy</h2>
+          <ul className="list-disc list-inside">
+            <li>Create a Wallet</li>
+            <li>Get Some ETH</li>
+            <li>Go to Uniswap </li>
+            <li>Switch ETH for $ROCKETDOGE</li>
+          </ul>
+        </div>
+      </article>
 
-      <div className="my-8">
-        <h2 className="text-2xl font-bold mb-2">How to buy</h2>
-        <ul className="list-disc list-inside">
-          <li>Create a Wallet</li>
-          <li>Get Some ETH</li>
-          <li>Go to Uniswap </li>
-          <li>Switch ETH for $ROCKETDOGE</li>
-        </ul>
-      </div>
+      <article style={{ backgroundColor: "blue" }}>
+        <div className="my-8">
+          <h2 className={styles.title}>Tokenomics</h2>
+          <ul className="list-disc list-inside">
+            <p className="text-xl text-center my-4">
+              Token supply : 700,000,000
+            </p>
+            <li>xxxx number of token for liquidity pool</li>
+          </ul>
+        </div>
+      </article>
 
-      <div className="my-8">
-        <h2 className="text-2xl font-bold mb-2">Tokenomics</h2>
-        <ul className="list-disc list-inside">
-          <p className="text-xl text-center my-4">Token supply : 700,000,000</p>
-          <li>xxxx number of token for liquidity pool</li>
-        </ul>
-      </div>
-
-      <div className="my-8">
-        <h2 className="text-2xl font-bold mb-2">Roadmap</h2>
-        <ul className="list-disc list-inside">
-          <li> </li>
-        </ul>
-      </div>
+      <article style={{ backgroundColor: "blue" }}>
+        <div className="my-8">
+          <h2 className={styles.title}>Roadmap</h2>
+          <ul className="list-disc list-inside">
+            <li> </li>
+          </ul>
+        </div>
+      </article>
 
       <footer>
         <div className={styles.footer}>
@@ -99,7 +138,10 @@ export default function Home() {
               height={50}
             />
           </a>
-          <p className>© 2023 ROCKET Doge. All rights reserved.</p>
+          <p>
+            {" "}
+            <strong>© 2023 ROCKET Doge. All rights reserved.</strong>
+          </p>
         </div>
       </footer>
     </div>

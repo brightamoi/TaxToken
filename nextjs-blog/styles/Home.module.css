@@ -12,6 +12,13 @@
   align-items: center;
 }
 
+.category {
+  color: #f8f40c;
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
 .footer {
   display: flex;
   padding: 2rem 0;
